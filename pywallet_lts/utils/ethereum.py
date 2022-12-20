@@ -24,6 +24,8 @@ from crypto_two1.crypto.ecdsa_base import Point
 from crypto_two1.crypto.ecdsa import ECPointAffine
 from crypto_two1.crypto.ecdsa import secp256k1
 
+from pywallet_lts.utils.utils import hash160
+
 bitcoin_curve = secp256k1()
 
 from Crypto.Hash import keccak
@@ -707,13 +709,8 @@ class PublicKey(PublicKeyBase):
         self.point = p
 
         # RIPEMD-160 of SHA-256
-        r = hashlib.new('ripemd160')
-        r.update(hashlib.sha256(bytes(self)).digest())
-        self.ripe = r.digest()
-
-        r = hashlib.new('ripemd160')
-        r.update(hashlib.sha256(self.compressed_bytes).digest())
-        self.ripe_compressed = r.digest()
+        self.ripe = hash160(bytes(self))
+        self.ripe_compressed = hash160(self.compressed_bytes)
 
         self.keccak = sha3(bytes(self)[1:])
 

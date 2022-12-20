@@ -2,7 +2,7 @@ from functools import wraps
 import hashlib
 from hashlib import sha256
 import re
-
+from Crypto.Hash import RIPEMD160
 import six
 
 if six.PY3:
@@ -32,7 +32,8 @@ def chr_py2(num):
 
 def hash160(data):
     """Return ripemd160(sha256(data))"""
-    rh = hashlib.new('ripemd160', sha256(data).digest())
+    rh = RIPEMD160.new()
+    rh.update(sha256(data).digest())
     return rh.digest()
 
 
