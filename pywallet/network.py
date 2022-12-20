@@ -4,7 +4,7 @@ class BitcoinGoldMainNet(object):
     COIN = "BTG"
     SCRIPT_ADDRESS = 0x17  # int(0x17) = 23
     PUBKEY_ADDRESS = 0x26  # int(0x26) = 38  # Used to create payment addresses
-    SECRET_KEY = 0x80      # int(0x80) = 128  # Used for WIF format
+    SECRET_KEY = 0x80  # int(0x80) = 128  # Used for WIF format
     EXT_PUBLIC_KEY = 0x0488b21E  # Used to serialize public BIP32 addresses
     EXT_SECRET_KEY = 0x0488ADE4  # Used to serialize private BIP32 addresses
     BIP32_PATH = "m/44'/0'/0'/"
@@ -16,7 +16,7 @@ class BitcoinCashMainNet(object):
     COIN = "BCH"
     SCRIPT_ADDRESS = 0x28  # int(0x28) = 40
     PUBKEY_ADDRESS = 0x1C  # int(0x00) = 28  # Used to create payment addresses
-    SECRET_KEY = 0x80      # int(0x80) = 128  # Used for WIF format
+    SECRET_KEY = 0x80  # int(0x80) = 128  # Used for WIF format
     EXT_PUBLIC_KEY = 0x0488b21E  # Used to serialize public BIP32 addresses
     EXT_SECRET_KEY = 0x0488ADE4  # Used to serialize private BIP32 addresses
     BIP32_PATH = "m/44'/145'/0'/"
@@ -28,7 +28,7 @@ class DashMainNet(object):
     COIN = "DASH"
     SCRIPT_ADDRESS = 0x10  # int(0x10) = 16
     PUBKEY_ADDRESS = 0x4C  # int(0x4C) = 76  # Used to create payment addresses
-    SECRET_KEY = 0xCC      # int(0xCC) = 204  # Used for WIF format
+    SECRET_KEY = 0xCC  # int(0xCC) = 204  # Used for WIF format
     EXT_PUBLIC_KEY = 0X0488B21E  # Used to serialize public BIP32 addresses
     EXT_SECRET_KEY = 0X0488ADE4  # Used to serialize private BIP32 addresses
     BIP32_PATH = "m/44'/5'/0'/"
@@ -40,10 +40,11 @@ class DashTestNet(object):
     COIN = "DASH"
     SCRIPT_ADDRESS = 0x13  # int(0x13) = 19
     PUBKEY_ADDRESS = 0x8C  # int(0x8C) = 140  # Used to create payment addresses
-    SECRET_KEY = 0xEF      # int(0xEF) = 239  # Used for WIF format
+    SECRET_KEY = 0xEF  # int(0xEF) = 239  # Used for WIF format
     EXT_PUBLIC_KEY = 0x043587CF  # Used to serialize public BIP32 addresses
     EXT_SECRET_KEY = 0x04358394  # Used to serialize private BIP32 addresses
     BIP32_PATH = "m/44'/1'/0'/"
+
 
 class OmniMainNet(object):
     """Bitcoin MainNet version bytes.
@@ -53,10 +54,11 @@ class OmniMainNet(object):
     COIN = "USDT"
     SCRIPT_ADDRESS = 0x00  # int(0x00) = 0
     PUBKEY_ADDRESS = 0x05  # int(0x05) = 5  # Used to create payment addresses
-    SECRET_KEY = 0x80      # int(0x80) = 128  # Used for WIF format
+    SECRET_KEY = 0x80  # int(0x80) = 128  # Used for WIF format
     EXT_PUBLIC_KEY = 0x0488B21E  # Used to serialize public BIP32 addresses
     EXT_SECRET_KEY = 0x0488ADE4  # Used to serialize private BIP32 addresses
     BIP32_PATH = "m/44'/0'/0'/"
+
 
 class OmniTestNet(object):
     """Bitcoin MainNet version bytes.
@@ -66,10 +68,11 @@ class OmniTestNet(object):
     COIN = "USDT"
     SCRIPT_ADDRESS = 0x6f  # int(0x6f) = 111
     PUBKEY_ADDRESS = 0xc4  # int(0xc4) = 196  # Used to create payment addresses
-    SECRET_KEY = 0xef      # int(0xef) = 239  # Used for WIF format
+    SECRET_KEY = 0xef  # int(0xef) = 239  # Used for WIF format
     EXT_PUBLIC_KEY = 0x043587CF  # Used to serialize public BIP32 addresses
     EXT_SECRET_KEY = 0x04358394  # Used to serialize private BIP32 addresses
     BIP32_PATH = "m/44'/0'/0'/"
+
 
 class BitcoinMainNet(object):
     """Bitcoin MainNet version bytes.
@@ -79,10 +82,11 @@ class BitcoinMainNet(object):
     COIN = "BTC"
     SCRIPT_ADDRESS = 0x05  # int(0x05) = 5
     PUBKEY_ADDRESS = 0x00  # int(0x00) = 0  # Used to create payment addresses
-    SECRET_KEY = 0x80      # int(0x80) = 128  # Used for WIF format
+    SECRET_KEY = 0x80  # int(0x80) = 128  # Used for WIF format
     EXT_PUBLIC_KEY = 0x0488B21E  # Used to serialize public BIP32 addresses
     EXT_SECRET_KEY = 0x0488ADE4  # Used to serialize private BIP32 addresses
     BIP32_PATH = "m/44'/0'/0'/"
+
 
 class FeathercoinMainNet(object):
     """Feathercoin MainNet version bytes.
@@ -92,10 +96,11 @@ class FeathercoinMainNet(object):
     COIN = "FTC"
     SCRIPT_ADDRESS = 0x05  # int(0x05) = 5
     PUBKEY_ADDRESS = 0x0E  # int(0x0E) = 14  # Used to create payment addresses
-    SECRET_KEY = 0x8E      # int(0x8E) = 142  # Used for WIF format
+    SECRET_KEY = 0x8E  # int(0x8E) = 142  # Used for WIF format
     EXT_PUBLIC_KEY = 0x0488BC26  # Used to serialize public BIP32 addresses
     EXT_SECRET_KEY = 0x0488DAEE  # Used to serialize private BIP32 addresses
     BIP32_PATH = "m/44'/4'/0'/"
+
 
 class BitcoinTestNet(object):
     """Bitcoin TestNet version bytes.
@@ -105,7 +110,7 @@ class BitcoinTestNet(object):
     COIN = "BTC"
     SCRIPT_ADDRESS = 0xc4  # int(0xc4) = 196
     PUBKEY_ADDRESS = 0x6f  # int(0x6f) = 111
-    SECRET_KEY = 0xEF      # int(0xef) = 239
+    SECRET_KEY = 0xEF  # int(0xef) = 239
     EXT_PUBLIC_KEY = 0x043587CF
     EXT_SECRET_KEY = 0x04358394
     BIP32_PATH = "m/44'/1'/0'/"
@@ -137,6 +142,7 @@ class LitecoinMainNet(object):
     EXT_SECRET_KEY = 0x0488ADE4
 
     BIP32_PATH = "m/44'/2'/0'/"
+
 
 class LitecoinTestNet(object):
     """Litecoin TestNet version bytes
@@ -218,7 +224,7 @@ class BlockCypherTestNet(object):
     COIN = "BlockCypher"
     SCRIPT_ADDRESS = 0x1f  # int(0x1f) = 31
     PUBKEY_ADDRESS = 0x1b  # int(0x1b) = 27  # Used to create payment addresses
-    SECRET_KEY = 0x49      # int(0x49) = 73  # Used for WIF format
+    SECRET_KEY = 0x49  # int(0x49) = 73  # Used for WIF format
     EXT_PUBLIC_KEY = 0x2d413ff  # Used to serialize public BIP32 addresses
     EXT_SECRET_KEY = 0x2d40fc3  # Used to serialize private BIP32 addresses
     BIP32_PATH = "m/44'/1'/0'/"
@@ -234,7 +240,7 @@ class QtumMainNet(object):
     COIN = "QTUM"
     SCRIPT_ADDRESS = 0x32  # int(0x32) = 50
     PUBKEY_ADDRESS = 0x3A  # int(0x3A) = 58  # Used to create payment addresses
-    SECRET_KEY = 0x80      # int(0x80) = 128  # Used for WIF format
+    SECRET_KEY = 0x80  # int(0x80) = 128  # Used for WIF format
     EXT_PUBLIC_KEY = 0x0488B21E  # Used to serialize public BIP32 addresses
     EXT_SECRET_KEY = 0x0488ADE4  # Used to serialize private BIP32 addresses
     BIP32_PATH = "m/44'/88'/0'/"
@@ -250,7 +256,7 @@ class QtumTestNet(object):
     COIN = "QTUM"
     SCRIPT_ADDRESS = 0x6E  # int(0x6e) = 110
     PUBKEY_ADDRESS = 0x78  # int(0x78) = 120
-    SECRET_KEY = 0xEF      # int(0xef) = 239
+    SECRET_KEY = 0xEF  # int(0xef) = 239
     EXT_PUBLIC_KEY = 0x043587CF
     EXT_SECRET_KEY = 0x04358394
     BIP32_PATH = "m/44'/88'/0'/"

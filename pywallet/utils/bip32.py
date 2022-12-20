@@ -111,7 +111,7 @@ class Wallet(object):
             if isinstance(val, six.integer_types):
                 return long_to_hex(val, hex_len)
             elif (isinstance(val, six.string_types) or
-                    isinstance(val, six.binary_type)) and is_hex_string(val):
+                  isinstance(val, six.binary_type)) and is_hex_string(val):
                 val = ensure_bytes(val)
                 if len(val) != hex_len:
                     raise ValueError("Invalid parameter length")
@@ -123,7 +123,7 @@ class Wallet(object):
             if isinstance(val, six.integer_types):
                 return long_or_int(val)
             elif (isinstance(val, six.string_types) or
-                    isinstance(val, six.binary_type)):
+                  isinstance(val, six.binary_type)):
                 val = ensure_bytes(val)
                 if not is_hex_string(val):
                     val = hexlify(val)
@@ -340,9 +340,9 @@ class Wallet(object):
             # I_L is added to the current key's secret exponent (mod n), where
             # n is the order of the ECDSA curve in use.
             private_exponent = (
-                (long_or_int(hexlify(I_L), 16) +
-                 long_or_int(self.private_key.get_key(), 16))
-                % SECP256k1.order)
+                    (long_or_int(hexlify(I_L), 16) +
+                     long_or_int(self.private_key.get_key(), 16))
+                    % SECP256k1.order)
             # I_R is the child's chain code
         else:
             # Only use public information for this derivation
@@ -497,7 +497,7 @@ class Wallet(object):
         # Return a base58 encoded address with a checksum
         return ensure_str(base58.b58encode_check(network_hash160_bytes))
 
-    @classmethod #@memoize
+    @classmethod  # @memoize
     def deserialize(cls, key, network="bitcoin_testnet"):
         """Load the ExtendedBip32Key from a hex key.
 
@@ -692,7 +692,7 @@ class Wallet(object):
         """
         seed = str(urandom(64))  # 512/8
         # weak extra protection inspired by pybitcointools implementation:
-        seed += str(int(time.time()*10**6))
+        seed += str(int(time.time() * 10 ** 6))
         if user_entropy:
             user_entropy = str(user_entropy)  # allow for int/long
             seed += user_entropy

@@ -19,7 +19,7 @@ def generate_child_id():
     seconds_since_midnight = (now - now.replace(
         hour=0, minute=0, second=0, microsecond=0)).total_seconds()
     return int((int(now.strftime(
-        '%y%m%d')) + seconds_since_midnight*1000000) // 100)
+        '%y%m%d')) + seconds_since_midnight * 1000000) // 100)
 
 
 def create_address(network='btctest', xpub=None, child=None, path=0):
@@ -52,8 +52,8 @@ def create_address(network='btctest', xpub=None, child=None, path=0):
     net = get_network(network)
 
     return {
-        "path": "m/" + str(wallet_obj.child_number) + "/" +str(child_wallet.child_number),
-        "bip32_path": net.BIP32_PATH + str(wallet_obj.child_number) + "/" +str(child_wallet.child_number),
+        "path": "m/" + str(wallet_obj.child_number) + "/" + str(child_wallet.child_number),
+        "bip32_path": net.BIP32_PATH + str(wallet_obj.child_number) + "/" + str(child_wallet.child_number),
         "address": child_wallet.to_address(),
         # "xpublic_key": child_wallet.serialize_b58(private=False),
         # "wif": child_wallet.export_to_wif() # needs private key
@@ -100,7 +100,6 @@ def get_network(network='btctest'):
 def create_wallet(network='btctest', seed=None, children=1):
     if seed is None:
         seed = generate_mnemonic()
-
 
     net = get_network(network)
     wallet = {

@@ -17,16 +17,17 @@ import hashlib
 import hmac
 from mnemonic.mnemonic import Mnemonic
 import random
-from two1.bitcoin.utils import bytes_to_str
-from two1.bitcoin.utils import address_to_key_hash
-from two1.bitcoin.utils import rand_bytes
-from two1.crypto.ecdsa_base import Point
-from two1.crypto.ecdsa import ECPointAffine
-from two1.crypto.ecdsa import secp256k1
+from crypto_two1.bitcoin.utils import bytes_to_str
+from crypto_two1.bitcoin.utils import address_to_key_hash
+from crypto_two1.bitcoin.utils import rand_bytes
+from crypto_two1.crypto.ecdsa_base import Point
+from crypto_two1.crypto.ecdsa import ECPointAffine
+from crypto_two1.crypto.ecdsa import secp256k1
 
 bitcoin_curve = secp256k1()
 
 from Crypto.Hash import keccak
+
 sha3_256 = lambda x: keccak.new(digest_bits=256, data=x)
 
 
@@ -1018,6 +1019,7 @@ class HDKey(object):
     Returns:
         HDKey: An HDKey object.
     """
+
     @staticmethod
     def from_b58check(key):
         """ Decodes a Base58Check encoded key.
